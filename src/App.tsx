@@ -1,5 +1,6 @@
 import NavBar from "./components/navbar";
 import Products from "./components/products";
+import Buscador from "./components/buscador";
 
 function App() {
 
@@ -8,6 +9,7 @@ function App() {
     <>
       <body>
         <NavBar />
+        <Buscador />
         <Products/>
 
       </body>
