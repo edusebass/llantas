@@ -6,14 +6,11 @@ function App() {
 
 
   return (
-    <>
-      <body>
-        <NavBar />
-        <Buscador />
-        <Products/>
-
-      </body>
-    </>
+    <body>
+      <NavBar />
+      <Buscador />
+      <Products/>
+    </body>
   )
 }
 
