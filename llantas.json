@@ -1,0 +1,67 @@
+{
+    "rines": {
+        "r13": [
+            {
+            "medida": "165/65R13",
+            "ancho": 165,
+            "altura": 65,
+            "rin": 13,
+            "marca": "SunWide",
+            "marcaimg": "https://res.cloudinary.com/dwowtb0ya/image/upload/v1696008689/llantas/marcas/sunwide_wntfua.png",
+            "precio": 40.00,
+            "labrado": "S060",
+            "procedencia": "China",
+            "foto": "https://res.cloudinary.com/dwowtb0ya/image/upload/v1696008413/llantas/175.70r13_sunwide_lhxl3w.png",
+            "indice_carga": 77,
+            "indice_velocidad": "T",
+            "descripcion": "Llanta de alto rendimiento para condiciones variadas.",
+            "tipo": "Auto"
+            },
+            {
+            "medida": "175/50R13",
+            "ancho": 175,
+            "altura": 50,
+            "rin": 13,
+            "marca": "Nankang",
+            "marcaimg": "https://res.cloudinary.com/dwowtb0ya/image/upload/v1696008922/llantas/marcas/nankang-logo-min_z3wjdk.jpg",
+            "precio": 65.00,
+            "labrado": "NS-2",
+            "procedencia": "China",
+            "foto": "https://res.cloudinary.com/dwowtb0ya/image/upload/v1696009044/llantas/175.50R13_NANKANG_cxqbt2.png",
+            "indice_carga": 72,
+            "indice_velocidad": "V",
+            "descripcion": "Llanta de alto rendimiento para condiciones variadas.",
+            "tipo": "Auto"
+            }
+        ],
+        "r14": [
+            {
+            "ancho": 195,
+            "altura": 60,
+            "rin": 14,
+            "marca": "Goodyear",
+            "precio": 140,
+            "procedencia": "Estados Unidos",
+            "foto": "enlace_a_la_foto_3",
+            "indice_carga": 88,
+            "indice_velocidad": "H",
+            "descripcion": "Llanta de alto rendimiento para tracción y agarre excepcionales.",
+            "tipo": "Verano"
+            },
+            {
+            "ancho": 205,
+            "altura": 70,
+            "rin": 14,
+            "marca": "Pirelli",
+            "precio": 130,
+            "procedencia": "Italia",
+            "foto": "enlace_a_la_foto_4",
+            "indice_carga": 91,
+            "indice_velocidad": "T",
+            "descripcion": "Llanta resistente y estable para diversas condiciones de la carretera.",
+            "tipo": "Todo Clima"
+            }
+        ]
+    }
+}
+  
