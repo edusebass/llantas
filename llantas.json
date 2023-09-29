@@ -32,34 +32,70 @@
             "indice_velocidad": "V",
             "descripcion": "Llanta de alto rendimiento para condiciones variadas.",
             "tipo": "Auto"
+            },
+            {
+            "medida": "175/70R13",
+            "ancho": 175,
+            "altura": 70,
+            "rin": 13,
+            "marca": "Tracmax",
+            "marcaimg": "https://res.cloudinary.com/dwowtb0ya/image/upload/v1696009931/llantas/marcas/tracmax_h18zom.png",
+            "precio": 37.00,
+            "labrado": "TX-5",
+            "procedencia": "China",
+            "foto": "https://res.cloudinary.com/dwowtb0ya/image/upload/v1696010154/llantas/175.70.R13_TRACMAX_adtubw.png",
+            "indice_carga": 82,
+            "indice_velocidad": "T",
+            "descripcion": "Llanta de alto rendimiento para condiciones variadas.",
+            "tipo": "Auto"
+            },
+            {
+            "medida": "175/70R13",
+            "ancho": 175,
+            "altura": 70,
+            "rin": 13,
+            "marca": "Triangle",
+            "marcaimg": "https://res.cloudinary.com/dwowtb0ya/image/upload/v1696010308/llantas/marcas/triangle_jw8rxr.jpg",
+            "precio": 45.00,
+            "labrado": "TR928",
+            "procedencia": "China",
+            "foto": "https://res.cloudinary.com/dwowtb0ya/image/upload/v1696010415/llantas/Llanta-Triangle-175.70R13_TR928_q0q4h0.jpg",
+            "indice_carga": 92,
+            "indice_velocidad": "H",
+            "descripcion": "Llanta de alto rendimiento para condiciones variadas.",
+            "tipo": "Auto"
             }
         ],
         "r14": [
             {
-            "ancho": 195,
+            "medida": "165/65R13",
+            "ancho": 165,
+            "altura": 65,
+            "rin": 13,
+            "marca": "Maxxis",
+            "marcaimg": "https://res.cloudinary.com/dwowtb0ya/image/upload/v1696011041/llantas/marcas/MAXXIS_ki7jar.jpg",
+            "precio": 60.00,
+            "labrado": "MP10",
+            "procedencia": "China",
+            "foto": "https://res.cloudinary.com/dwowtb0ya/image/upload/v1696011172/llantas/maxxis-mp10_185.60r14_erqtql.jpg",
+            "indice_carga": 82,
+            "indice_velocidad": "H",
+            "descripcion": "Llanta de alto rendimiento para condiciones variadas.",
+            "tipo": "Auto"
+            },{
+            "medida": "185/60R14",
+            "ancho": 185,
             "altura": 60,
             "rin": 14,
-            "marca": "Goodyear",
-            "precio": 140,
-            "procedencia": "Estados Unidos",
-            "foto": "enlace_a_la_foto_3",
-            "indice_carga": 88,
+            "marca": "Nexen",
+            "precio": 65.00,
+            "labrado": "N Ferra primus V",
+            "procedencia": "China",
+            "foto": "URL_de_la_foto_de_Maxxis",
+            "indice_carga": 82,
             "indice_velocidad": "H",
-            "descripcion": "Llanta de alto rendimiento para tracción y agarre excepcionales.",
-            "tipo": "Verano"
-            },
-            {
-            "ancho": 205,
-            "altura": 70,
-            "rin": 14,
-            "marca": "Pirelli",
-            "precio": 130,
-            "procedencia": "Italia",
-            "foto": "enlace_a_la_foto_4",
-            "indice_carga": 91,
-            "indice_velocidad": "T",
-            "descripcion": "Llanta resistente y estable para diversas condiciones de la carretera.",
-            "tipo": "Todo Clima"
+            "descripcion": "Llanta de alto rendimiento para condiciones variadas.",
+            "tipo": "Auto"
             }
         ]
     }
