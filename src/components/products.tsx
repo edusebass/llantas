@@ -1,34 +1,36 @@
-import { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react';
 import Card from './Card';
+
+interface Llanta {
+    ancho: number;
+    altura: number;
+    rin: number;
+    marcaimg: string;
+    precio: number;
+    foto: string;
+}
 
 const json = "llantas.json";
 
-const products = () => {
-
-    const [data, setData] = useState(null)
+const Products: React.FC = () => {
+    const [data, setData] = useState<Llanta[] | null>(null);
 
     useEffect(() => {
-        // Use the fetch API to load the JSON data
         fetch(json)
             .then((response) => response.json())
-            .then((jsonData) => {
-                // Set the JSON data to your component state
+            .then((jsonData: { rines: Llanta[] }) => {
                 setData(jsonData.rines);
             })
             .catch((error) => {
                 console.error('Error loading JSON data:', error);
             });
-
     }, []);
 
     return (
-        <section className=" bg-gray-100 flex">
-            <div
-                className="mx-auto w-full h-full grid max-w-6xl grid-cols-1 gap-6 p-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
-            >
-                {
-                    data !== null ?
-                    data.map((llanta: any, index: string) => (
+        <section className="bg-gray-100 flex">
+            <div className="mx-auto w-full h-full grid max-w-6xl grid-cols-1 gap-6 p-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+                {data !== null ? (
+                    data.map((llanta, index) => (
                         <Card
                             key={index}
                             ancho={llanta.ancho}
@@ -39,11 +41,12 @@ const products = () => {
                             foto={llanta.foto}
                         />
                     ))
-                    : <p>Loading...</p>
-                }
+                ) : (
+                    <p>Loading...</p>
+                )}
             </div>
         </section>
     );
 };
 
-export default products;
+export default Products;
