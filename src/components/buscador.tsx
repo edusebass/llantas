@@ -2,9 +2,6 @@ import { useState, useEffect } from 'react';
 
 const buscador = () => {
     const [isMobile, setIsMobile] = useState(false);
-    const [ancho, setAncho] = useState('');
-    const [altura, setAltura] = useState('');
-    const [rin, setRin] = useState('');
 
     useEffect(() => {
         const handleResize = () => {
