@@ -10,7 +10,7 @@ interface Llanta {
     foto: string;
 }
 
-const json = "../../llantas.json";
+const json = "llantas.json";
 
 const Products: React.FC = () => {
     const [data, setData] = useState<Llanta[] | null>(null);
