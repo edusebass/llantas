@@ -5,7 +5,7 @@ const json = "llantas.json";
 
 const products = () => {
 
-    const [data, setData] = useState(null);
+    const [data, setData] = useState(null)
 
     useEffect(() => {
         // Use the fetch API to load the JSON data
@@ -21,8 +21,6 @@ const products = () => {
 
     }, []);
 
-    console.log(data);
-
     return (
         <section className=" bg-gray-100 flex">
             <div
@@ -30,8 +28,9 @@ const products = () => {
             >
                 {
                     data !== null ?
-                    data.map((llanta: any) => {
+                    data.map((llanta: any, index: string) => (
                         <Card
+                            key={index}
                             ancho={llanta.ancho}
                             altura={llanta.altura}
                             rin={llanta.rin}
@@ -39,7 +38,7 @@ const products = () => {
                             precio={llanta.precio}
                             foto={llanta.foto}
                         />
-                    })
+                    ))
                     : <p>Loading...</p>
                 }
             </div>
