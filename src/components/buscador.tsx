@@ -1,6 +1,4 @@
 import { useState, useEffect } from 'react';
-// import Slash from '../../public/slash.svg';
-// import LetterR from '../../public/letter-r.svg';
 
 const buscador = () => {
     const [isMobile, setIsMobile] = useState(false);
