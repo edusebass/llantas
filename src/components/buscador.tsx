@@ -3,6 +3,28 @@ import { useState, useEffect } from 'react';
 const Buscador = () => {
     const [isMobile, setIsMobile] = useState(false);
 
+    const [formData, setFormData] = useState({
+        ancho: '',
+        altura: '',
+        rin: ''
+    });
+
+    const handleInputChange = (event) => {
+        const { name, value } = event.target;
+        setFormData({
+            ...formData,
+            [name]: value
+        });
+    };
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        console.log('Datos del formulario:', formData);
+        // Aquí puedes hacer otras operaciones con los datos del formulario si es necesario
+    };
+    
+    
+    
     useEffect(() => {
         const handleResize = () => {
             setIsMobile(window.innerWidth <= 740); // Cambia 640 al ancho que consideres como "tamaño de celular"
@@ -24,7 +46,7 @@ const Buscador = () => {
         <div className="bg-gray-100 py-5">
         {isMobile ? (
             // Muestra el buscador en celular
-            <form className="bg-slate-50 rounded-lg shadow-lg py-6 gap-4 justify-center items-center">
+            <form className="bg-slate-50 rounded-lg shadow-lg py-6 gap-4 justify-center items-center" onSubmit={handleSubmit}>
                 <div className="flex justify-center items-center text-xl">
                     <h2 className="font-bold capitalize text-2xl">Busca por medida</h2>
                 </div>
@@ -42,7 +64,7 @@ const Buscador = () => {
             </form>
         ) : (
             // Muestra el buscador en en pantallas
-            <div className='flex flex-col justify-center items-center'>
+            <div className='flex flex-col justify-center items-center' onSubmit={handleSubmit}>
                 <form className="flex flex-col p-6 bg-slate-50 mx-40 rounded-lg shadow-lg items-center justify-center">
                     <div className="text-2xl font-bold capitalize items-center justify-center">
                         <h2 className="">
@@ -54,11 +76,14 @@ const Buscador = () => {
                             <div className="flex flex-col justify-center gap-2">
                                 <h2>Ancho</h2>
                                 <input
-                                    type="search"
-                                    id="search"
-                                    className="p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50"
-                                    placeholder="175"
-                                    required
+                                type="search"
+                                id="searchAncho"
+                                name="ancho"
+                                className="py-2 px-4 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50"
+                                placeholder="185"
+                                value={formData.ancho}
+                                onChange={handleInputChange}
+                                required
                                 />
                             </div>
                         </div>
@@ -67,23 +92,29 @@ const Buscador = () => {
                                 <h2>Altura</h2>
                                 <input
                                     type="search"
-                                    id="search"
-                                    className="p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50"
-                                    placeholder="70"
+                                    id="searchAltura"
+                                    name="altura"
+                                    className="py-2 px-4 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50"
+                                    placeholder="60"
+                                    value={formData.altura}
+                                    onChange={handleInputChange}
                                     required
                                 />
                             </div>
                         </div>
                         <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/4 p-4">
                             <div className="flex flex-col justify-center gap-2">
-                            <h2>Rin</h2>
-                            <input
-                                type="search"
-                                id="search"
-                                className="p-4 pl-10 pr-6 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50"
-                                placeholder="13"
-                                required
-                            />
+                                <h2>Rin</h2>
+                                <input
+                                    type="search"
+                                    id="searchRin"
+                                    name="rin"
+                                    className="py-2 px-4 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50"
+                                    placeholder="14"
+                                    value={formData.rin}
+                                    onChange={handleInputChange}
+                                    required
+                                />
                             </div>
                         </div>
                     </div>
