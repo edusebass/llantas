@@ -5,7 +5,7 @@ const json = "llantas.json";
 
 const products = () => {
 
-    const [data, setData] = useState();
+    const [data, setData] = useState(null);
 
     useEffect(() => {
         // Use the fetch API to load the JSON data
@@ -26,11 +26,11 @@ const products = () => {
     return (
         <section className=" bg-gray-100 flex">
             <div
-                className="mx-auto grid max-w-6xl  grid-cols-1 gap-6 p-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
+                className="mx-auto w-full h-full grid max-w-6xl grid-cols-1 gap-6 p-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
             >
                 {
-                    data !== undefined ?
-                    data.map((llanta) => {
+                    data !== null ?
+                    data.map((llanta: any) => {
                         <Card
                             ancho={llanta.ancho}
                             altura={llanta.altura}
