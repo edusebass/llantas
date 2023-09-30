@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-const buscador = () => {
+const Buscador = () => {
     const [isMobile, setIsMobile] = useState(false);
 
     useEffect(() => {
@@ -100,4 +100,4 @@ const buscador = () => {
     );
 };
 
-export default buscador;
+export default Buscador;
