@@ -33,7 +33,7 @@ const Buscador = () => {
             return [];
         }
 
-        return llantas.filter((llanta) => {
+        return llantas.filter((llanta: { ancho: number; altura: number; rin: number; }) => {
 
             const anchoMatch =
                 filterData.ancho === '' ?
