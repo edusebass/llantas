@@ -13,8 +13,16 @@ function Navbar() {
                 <div className="w-full text-gray-700 bg-white dark-mode:text-gray-200 dark-mode:bg-gray-800 rounded-b-2xl shadow-md">
                     <div className="flex flex-col max-w-screen-xl px-4 mx-auto sm:items-center sm:justify-between sm:flex-row sm:px-6 lg:px-8">
                         <div className="flex flex-row items-center justify-between p-4">
-                            <a href="#" className="text-lg font-semibold tracking-widest text-gray-900 uppercase rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline">STOCK LLANTAS</a>
-                            <button className={`rounded-lg sm:hidden focus:outline-none focus:shadow-outline flex items-center justify-center transition ease-in-out duration-400 ${isOpen ? 'rotate-180 mt-1' : 'rotate-0 mt-2'}`} onClick={toggleMenu}>
+                            <a
+                                href="#"
+                                className="text-lg font-semibold tracking-widest text-gray-900 uppercase rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline"
+                            >
+                                STOCK LLANTAS
+                            </a>
+                            <button
+                                className={`rounded-lg sm:hidden focus:outline-none focus:shadow-outline flex items-center justify-center transition ease-in-out duration-400 ${isOpen ? 'rotate-180 mt-1' : 'rotate-0 mt-2'}`}
+                                onClick={toggleMenu}
+                            >
                                 <svg fill="currentColor" viewBox="0 0 20 20" className="w-8 h-8">
                                     <path
                                         fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd"
