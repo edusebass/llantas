@@ -12,7 +12,7 @@ interface Llanta {
     foto: string;
 }
 
-const json = "../../llantas.json";
+const json = "/llantas.json";
 
 const Products: React.FC = () => {
     const llantasToDisplay = useLlantasStore((state) => state.llantasToDisplay);
