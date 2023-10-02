@@ -12,7 +12,7 @@ interface Llanta {
     foto: string;
 }
 
-const json = "../../llantas.json";
+const json = "https://apimocha.com/llantas/busqueda";
 
 const Products: React.FC = () => {
     const llantasToDisplay = useLlantasStore((state) => state.llantasToDisplay);
@@ -61,11 +61,12 @@ const Products: React.FC = () => {
                             >
                                 Sugerencia: Verifica que las medidas esten correctamente escritas.
                             </p>
+                            
                         </div>
                     )
                     ) : (
                         <p>
-                            NO SE CARGA EL JSON
+                            NO SE CARGA EL JSON... cargando....
                         </p>
                     )}
             </div>
