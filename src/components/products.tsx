@@ -11,7 +11,7 @@ interface Llanta {
     foto: string;
 }
 
-const json = "llantas.json";
+const json = "https://github.com/edusebass/llantas/blob/b2b20e8697d507482b4ab537227c971069034cd4/llantas.json";
 
 const Products: React.FC = () => {
     const llantasToDisplay = useLlantasStore((state) => state.llantasToDisplay);
