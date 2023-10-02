@@ -2,16 +2,6 @@ import React, { useEffect } from 'react';
 import Card from './Card';
 import useLlantasStore from '../store';
 
-
-interface Llanta {
-    ancho: number;
-    altura: number;
-    rin: number;
-    marcaimg: string;
-    precio: number;
-    foto: string;
-}
-
 const json = "../../llantas.json";
 
 const Products: React.FC = () => {
