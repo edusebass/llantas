@@ -20,7 +20,7 @@ const Buscador = () => {
         });
     };
 
-    const handleInputChange = (event) => {
+    const handleInputChange = (event: { target: { name: any; value: any; }; }) => {
         const { name, value } = event.target;
         setFormData({
             ...formData,
@@ -28,7 +28,7 @@ const Buscador = () => {
         });
     };
 
-    const filterLlantas = (llantas, filterData) => {
+    const filterLlantas = (llantas: any[] | null, filterData: { ancho: any; altura: any; rin: any; }) => {
         if (!llantas) {
             return [];
         }
