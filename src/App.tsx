@@ -1,6 +1,6 @@
-import NavBar from "./components/navbar";
-import Products from "./components/products";
-import Buscador from "./components/buscador";
+import NavBar from "./components/Navbar";
+import Products from "./components/Products";
+import Buscador from "./components/Buscador";
 
 function App() {
 

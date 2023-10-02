@@ -1,4 +1,46 @@
 @tailwind base;
+
+:root {
+    --primary: #F3F4F6;
+    --secondary: #000000;
+    --yellow: #98BBF5;
+}
+
+/* Settings for firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--secondary) var(--primary);
+    scroll-behavior: smooth;
+}
+
+/* Settings for another browsers */
+*::-webkit-scrollbar {
+    width: 10px;
+    border-radius: 0px;
+}
+
+*::-webkit-scrollbar-track {
+    background: var(--primary);
+    border-radius: 0px;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: var(--secondary);
+    border-radius: 5px;
+    border: 3px solid var(--primary);
+}
+
+*::selection {
+    background: var(--yellow);
+    color: var(--primary)
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
 @tailwind components;
 @tailwind utilities;
-
