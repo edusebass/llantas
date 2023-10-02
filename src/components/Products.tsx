@@ -22,8 +22,10 @@ const Products: React.FC = () => {
     }, [setLlantas]);
 
     return (
-        <section className="bg-gray-100 flex">
-            <div className="mx-auto w-full h-full grid max-w-6xl grid-cols-1 gap-6 p-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 items-center justify-center">
+        <section className="bg-gray-100 flex min-h-screen">
+            <div
+                className="mx-auto w-full h-full flex flex-wrap max-w-7xl gap-6 pt-4 pb-12 px-4 md:px-0 items-center justify-center"
+            >
                 { llantasToDisplay !== null ?
                     ( llantasToDisplay.length > 0 ?(
                         llantasToDisplay.map((llanta, index) => (
@@ -39,15 +41,15 @@ const Products: React.FC = () => {
                         ))
                     ) : (
                         <div
-                            className='flex flex-col items-center justify-center w-full'
+                            className='flex flex-col items-center justify-center w-full pt-16 gap-4'
                         >
                             <p
-                                className='text-center w-full font-bold'
+                                className='text-center w-full font-bold sm:text-2xl'
                             >
                                 Por el momento no hay llantas con las medidas deseadas.
                             </p>
                             <p
-                                className='text-center w-full italic'
+                                className='text-center w-full italic sm:text-xl'
                             >
                                 Sugerencia: Verifica que las medidas esten correctamente escritas.
                             </p>

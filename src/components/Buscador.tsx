@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import useLlantasStore from '../store';
 import { filterLlantas } from '../utils/filter';
 import SearchbarInput from './SearchbarInput';
+import Button from './Button';
 
 const initialValues = {
     ancho: '',
@@ -53,7 +54,7 @@ const Buscador: React.FC = () => {
     }, []);
 
     return (
-        <div className="bg-gray-100 py-5">
+        <div className="bg-gray-100 py-8">
         {isMobile ? (
             // Muestra el buscador en celular
             <form className="bg-slate-50 rounded-lg shadow-lg py-6 gap-4 justify-center items-center pb-10">
@@ -62,7 +63,7 @@ const Buscador: React.FC = () => {
                         Busca por medida
                     </h2>
                 </div>
-                <div className="flex flex-col items-center justify-center gap-2">
+                <div className="flex flex-col items-center justify-center gap-2 mt-4">
                     <SearchbarInput
                         text='Ancho'
                         placeholder='185'
@@ -84,13 +85,10 @@ const Buscador: React.FC = () => {
                         onChange={handleInputChange}
                         value={formData.rin}
                     />
-                    <button
-                        type='button'
+                    <Button
+                        text='Limpiar'
                         onClick={clearFilters}
-                        className="mx-auto w-2/3 py-3 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm mt-6"
-                    >
-                        Limpiar
-                    </button>
+                    />
                 </div>
             </form>
         ) : (
@@ -131,13 +129,10 @@ const Buscador: React.FC = () => {
                             />
                         </div>
                     </div>
-                    <button
-                        type='button'
+                    <Button
+                        text='Limpiar'
                         onClick={clearFilters}
-                        className="mx-auto w-2/3 py-3 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm mt-6"
-                    >
-                        Limpiar
-                    </button>
+                    />
                 </form>
             </div>
         )}

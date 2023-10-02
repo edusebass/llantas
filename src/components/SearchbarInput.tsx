@@ -18,8 +18,10 @@ const SearchbarInput = ({
     value
 }: Props) => {
     return (
-        <div>
-            <h2 className='mt-4'>
+        <div
+            className="flex flex-col justify-center gap-2"
+        >
+            <h2 className=''>
                 {text}
             </h2>
             <input
