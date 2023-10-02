@@ -65,7 +65,7 @@ const Products: React.FC = () => {
                     )
                     ) : (
                         <p>
-                            Cargando...
+                            NO SE CARGA EL JSON
                         </p>
                     )}
             </div>
