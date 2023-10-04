@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import Card from './Card';
 import useLlantasStore from '../store';
 
-const json = "../../llantas.json";
+const json = "https://apimocha.com/llantas/busqueda";
 
 const Products: React.FC = () => {
     const llantasToDisplay = useLlantasStore((state) => state.llantasToDisplay);
