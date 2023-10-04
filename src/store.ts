@@ -1,16 +1,5 @@
 import { create } from 'zustand';
 
-interface Llanta {
-    ancho: number;
-    altura: number;
-    rin: number;
-    marcaimg: string;
-    precio: number;
-    foto: string;
-    labrado: string;
-    marca: string;
-}
-
 interface LlantasStore {
     llantas: Llanta[] | null;
     llantasToDisplay: Llanta[] | null;
