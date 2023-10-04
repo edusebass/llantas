@@ -18,14 +18,14 @@ function Card({
             >
                 <div className="flex justify-center items-center overflow-hidden rounded-xl h-2/3">
                     <img
-                        src={foto}
-                        className="object-cover object-left h-full"
+                        src={foto ?? "https://res.cloudinary.com/ds41xxspf/image/upload/v1696456721/Placeholder_view_vector.svg_r3qis6.png"}
+                        className="object-cover object-center h-full"
                         draggable={false}
                     />
                 </div>
                 <div className="flex flex-col items-center justify-center gap-4">
                     <h2 className="text-slate-700 font-bold text-xl text-center">
-                        {`${ancho ?? ''}/${altura ?? ''}R${rin ?? ''} ${labrado} ${marca}`}
+                        {`${ancho ?? ''}/${altura ?? ''}R${rin ?? ''} ${labrado} ${marca ?? ""}`}
                     </h2>
                     <img src={marcaimg} alt="logo marca"
                         className="h-8 object-cover object-center w-auto"
