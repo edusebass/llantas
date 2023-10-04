@@ -1,24 +1,31 @@
 import React, { useEffect } from 'react';
 import Card from './Card';
 import useLlantasStore from '../store';
-
-const json = "../../llantas.json";
+import { db } from '../firebase/firebase';
+import { collection, getDocs } from 'firebase/firestore/lite';
 
 const Products: React.FC = () => {
     const llantasToDisplay = useLlantasStore((state) => state.llantasToDisplay);
     const setLlantas = useLlantasStore((state) => state.setLlantas);
     const setFilteredLlantas = useLlantasStore((state) => state.setFilteredLlantas);
 
+    const fetchData = async () => {
+        const collectionRef = collection(db, 'tires');
+
+        try {
+            const querySnapshot = await getDocs(collectionRef);
+            const newData: any = querySnapshot.docs.map(doc => doc.data());
+            setLlantas(newData);
+            setFilteredLlantas(newData);
+        } catch (error) {
+            console.error('Error getting documents: ', error);
+        }
+    };
+
     useEffect(() => {
-        fetch(json)
-            .then((response) => response.json())
-            .then((jsonData: { rines: Llanta[] }) => {
-                setLlantas(jsonData.rines);
-                setFilteredLlantas(jsonData.rines);
-            })
-            .catch((error) => {
-                console.log('Error loading JSON data: ' + error.message);
-            });
+
+        fetchData();
+
     }, [setLlantas]);
 
     return (
