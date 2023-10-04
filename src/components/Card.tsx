@@ -8,6 +8,7 @@ function Card({
     labrado,
     marca
 }: Llanta) {
+    const precioFormateado = precio ? precio.toFixed(2) : 'Precio';
     return (
         <article
             className="rounded-xl bg-white p-5 shadow-lg hover:shadow-xl hover:transform hover:scale-105 duration-300 h-[450px] w-72"
@@ -31,7 +32,7 @@ function Card({
                     />
                     <div className="flex items-center justify-between w-full xl:w-5/6">
                         <p className="text-lg font-bold text-blue-500">
-                            {`$${precio}`}
+                            {`$${precioFormateado}`}
                         </p>
 
                         <div
