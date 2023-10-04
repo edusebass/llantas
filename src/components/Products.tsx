@@ -58,7 +58,7 @@ const Products: React.FC = () => {
                                 Por el momento no hay llantas con las medidas deseadas.
                             </p>
                             <p
-                                className='text-center w-full italic sm:text-xl'
+                                className='text-center w-full italic sm:text-xl animate-pulse'
                             >
                                 Sugerencia: Verifica que las medidas esten correctamente escritas.
                             </p>
