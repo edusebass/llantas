@@ -7,6 +7,8 @@ interface Llanta {
     marcaimg: string;
     precio: number;
     foto: string;
+    labrado: string;
+    marca: string;
 }
 
 interface LlantasStore {

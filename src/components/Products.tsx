@@ -44,6 +44,8 @@ const Products: React.FC = () => {
                                 marcaimg={llanta.marcaimg}
                                 precio={llanta.precio}
                                 foto={llanta.foto}
+                                labrado={llanta.labrado}
+                                marca={llanta.marca}
                             />
                         ))
                     ) : (
