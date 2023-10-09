@@ -1,13 +1,19 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Card from './Card';
 import useLlantasStore from '../store';
 import { db } from '../firebase/firebase';
 import { collection, getDocs } from 'firebase/firestore/lite';
+import Pagination from './Pagination';
 
 const Products: React.FC = () => {
+    const [currentPage, setCurrentPage] = useState(1); 
+    const itemsPerPage = 32;
+
     const llantasToDisplay = useLlantasStore((state) => state.llantasToDisplay);
     const setLlantas = useLlantasStore((state) => state.setLlantas);
     const setFilteredLlantas = useLlantasStore((state) => state.setFilteredLlantas);
+
+    
 
     const fetchData = async () => {
         const collectionRef = collection(db, 'tires');
@@ -22,11 +28,24 @@ const Products: React.FC = () => {
         }
     };
 
+    if (llantasToDisplay === null) {
+        return <p>Cargando...</p>;
+    }
+
+    const indexOfLastItem = currentPage * itemsPerPage;
+    console.log(indexOfLastItem);
+    const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+    console.log(indexOfFirstItem);
+    const currentItems = llantasToDisplay.slice(indexOfFirstItem, indexOfLastItem);
+    console.log(currentItems);
+
     useEffect(() => {
 
         fetchData();
 
     }, [setLlantas]);
+
+    
 
     return (
         <section className="bg-gray-100 flex min-h-screen">
@@ -35,7 +54,7 @@ const Products: React.FC = () => {
             >
                 { llantasToDisplay !== null ?
                     ( llantasToDisplay.length > 0 ?(
-                        llantasToDisplay.map((llanta, index) => (
+                        currentItems.map((llanta, index) => (
                             <Card
                                 key={index}
                                 ancho={llanta.ancho}
@@ -69,6 +88,7 @@ const Products: React.FC = () => {
                             Cargando...
                         </p>
                     )}
+                    <div><Pagination totalPages={Math.ceil(llantasToDisplay.length / itemsPerPage)} currentPage={currentPage} setCurrentPage={setCurrentPage} /></div>
             </div>
         </section>
     );
