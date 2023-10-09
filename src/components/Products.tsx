@@ -27,6 +27,12 @@ const Products: React.FC = () => {
             console.error('Error getting documents: ', error);
         }
     };
+    
+    useEffect(() => {
+
+        fetchData();
+
+    }, [setLlantas]);
 
     if (llantasToDisplay === null) {
         return <p>Cargando...</p>;
@@ -39,11 +45,7 @@ const Products: React.FC = () => {
     const currentItems = llantasToDisplay.slice(indexOfFirstItem, indexOfLastItem);
     console.log(currentItems);
 
-    useEffect(() => {
-
-        fetchData();
-
-    }, [setLlantas]);
+    
 
     
 
@@ -88,7 +90,11 @@ const Products: React.FC = () => {
                             Cargando...
                         </p>
                     )}
-                    <div><Pagination totalPages={Math.ceil(llantasToDisplay.length / itemsPerPage)} currentPage={currentPage} setCurrentPage={setCurrentPage} /></div>
+                    <div><Pagination 
+                    totalPages={Math.ceil(llantasToDisplay.length / itemsPerPage)} 
+                    currentPage={currentPage} 
+                    setCurrentPage={setCurrentPage} /></div>
+                    
             </div>
         </section>
     );
