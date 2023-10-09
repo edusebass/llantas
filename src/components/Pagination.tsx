@@ -12,7 +12,7 @@ const Pagination: React.FC<PaginationProps> = ({ totalPages, setCurrentPage }) =
     return (
         <div className="">
             {pageNumbers.map((number) => (
-                <button className=" font-extrabold mr-16 mb-2" key={number} onClick={() => setCurrentPage(number)}>
+                <button className=" font-extrabold mr-4 justify-center sm:mr-16 sm:mb-2" key={number} onClick={() => setCurrentPage(number)}>
                         {number}
                 </button>
             ))}
