@@ -9,7 +9,7 @@ const Products: React.FC = () => {
     const [currentPage, setCurrentPage] = useState(1); 
     const itemsPerPage = 32;
 
-    const [pageNumberLimit, setPageNumberLimit] = useState(5);
+    const [pageNumberLimit] = useState(5);
     const [maxPageNumberLimit, setMaxPageNumberLimit] = useState(5);
     const [minPageNumberLimit, setMinPageNumberLimit] = useState(5);
 
