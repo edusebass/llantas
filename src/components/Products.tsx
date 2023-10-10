@@ -9,9 +9,9 @@ const Products: React.FC = () => {
     const [currentPage, setCurrentPage] = useState(1); 
     const itemsPerPage = 32;
 
-    // const [pageNumberLimit, setPageNumberLimit] = useState(5);
-    // const [maxPageNumberLimit, setMaxPageNumberLimit] = useState(5);
-    // const [minPageNumberLimit, setMinPageNumberLimit] = useState(5);
+    const [pageNumberLimit, setPageNumberLimit] = useState(5);
+    const [maxPageNumberLimit, setMaxPageNumberLimit] = useState(5);
+    const [minPageNumberLimit, setMinPageNumberLimit] = useState(5);
 
     const llantasToDisplay = useLlantasStore((state) => state.llantasToDisplay);
     const setLlantas = useLlantasStore((state) => state.setLlantas);
@@ -77,6 +77,7 @@ const Products: React.FC = () => {
                         <div
                             className='flex flex-col items-center justify-center w-full pt-16 gap-4'
                         >
+                            
                             <p
                                 className='text-center w-full font-bold sm:text-2xl'
                             >
@@ -94,13 +95,20 @@ const Products: React.FC = () => {
                             Cargando...
                         </p>
                     )}
-                    <div><Pagination 
+                    <div><Pagination
+                    maxLimit={maxPageNumberLimit} 
                     totalPages={Math.ceil(llantasToDisplay.length / itemsPerPage)} 
                     currentPage={currentPage} 
-                    setCurrentPage={setCurrentPage} /></div>
-                    
+                    setCurrentPage={setCurrentPage} 
+                    setMaxPageNumberLimit={setMaxPageNumberLimit}
+                    setMinPageNumberLimit={setMinPageNumberLimit}
+                    pageNumberLimit={pageNumberLimit}
+                    minLimit={minPageNumberLimit}
+                    /></div>
             </div>
+            
         </section>
+        
     );
 };
 
