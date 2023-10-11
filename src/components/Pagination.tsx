@@ -1,4 +1,6 @@
 import React from 'react';
+import {GrLinkPrevious, GrLinkNext} from 'react-icons/gr';
+
 
 interface PaginationProps {
     maxLimit: number;
@@ -20,8 +22,7 @@ setMaxPageNumberLimit: (page: number) => void, setMinPageNumberLimit: (page: num
             setMaxPageNumberLimit(maxLimit +  pageNumberLimit);
             setMinPageNumberLimit(minLimit +  pageNumberLimit);
         }
-    
-
+        
 };
 
 const handlePrevtBtn = (setCurrentPage: (page: number) => void, currentPage: number,  maxLimit: number,
@@ -36,8 +37,6 @@ setMaxPageNumberLimit: (page: number) => void, setMinPageNumberLimit: (page: num
 
 };
 
-
-
 const Pagination: React.FC<PaginationProps> = ({ 
     totalPages, 
     currentPage, 
@@ -51,10 +50,11 @@ const Pagination: React.FC<PaginationProps> = ({
     const pageNumbers = Array.from({ length: totalPages }, (_, index) => index + 1);
 
     return (
-        <div className="flex-wrap pt-8">
+        <div className="flex flex-wrap justify-center pt-8">
             <button className={`font-bold mr-2 rounded-lg bg-blue-500 p-3 text-white ${currentPage === 1 ? 'hidden': ''}`}
-            onClick={() => handlePrevtBtn(setCurrentPage, currentPage, maxLimit, setMaxPageNumberLimit, setMinPageNumberLimit, pageNumberLimit, minLimit)}>Anterior</button>
-
+            onClick={() => handlePrevtBtn(setCurrentPage, currentPage, maxLimit, setMaxPageNumberLimit, setMinPageNumberLimit, pageNumberLimit, minLimit)}>
+            <GrLinkPrevious/></button>
+            
             {pageNumbers.map((number) => (
                 number < maxLimit + 1 && (
                     <button
@@ -63,13 +63,18 @@ const Pagination: React.FC<PaginationProps> = ({
                         key={number}
                         onClick={() => setCurrentPage(number)}
                     >
+                        
                         {number}
+                        
                     </button>
+                    
                 )
             ))}
+            
             <button
             className='font-bold mr-2 rounded-lg bg-blue-500 p-3 text-white' 
-            onClick={() => handleNextBtn(setCurrentPage, currentPage, totalPages, maxLimit, setMaxPageNumberLimit, setMinPageNumberLimit, pageNumberLimit, minLimit)}>Siguiente</button>
+            onClick={() => handleNextBtn(setCurrentPage, currentPage, totalPages, maxLimit, setMaxPageNumberLimit, setMinPageNumberLimit, pageNumberLimit, minLimit)}>
+            <GrLinkNext className="flex"/></button>
 
         </div>
     );

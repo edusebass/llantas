@@ -7,11 +7,11 @@ import Pagination from './Pagination';
 
 const Products: React.FC = () => {
     const [currentPage, setCurrentPage] = useState(1); 
-    const itemsPerPage = 32;
+    const itemsPerPage = 40;
 
-    const [pageNumberLimit] = useState(5);
-    const [maxPageNumberLimit, setMaxPageNumberLimit] = useState(5);
-    const [minPageNumberLimit, setMinPageNumberLimit] = useState(5);
+    const [pageNumberLimit] = useState(3);
+    const [maxPageNumberLimit, setMaxPageNumberLimit] = useState(3);
+    const [minPageNumberLimit, setMinPageNumberLimit] = useState(0);
 
     const llantasToDisplay = useLlantasStore((state) => state.llantasToDisplay);
     const setLlantas = useLlantasStore((state) => state.setLlantas);
