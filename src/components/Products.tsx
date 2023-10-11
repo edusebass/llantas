@@ -110,6 +110,16 @@ const Products: React.FC = () => {
             </div>
             
         </section>
+        <Pagination
+            maxLimit={maxPageNumberLimit} 
+            totalPages={Math.ceil(llantasToDisplay.length / itemsPerPage)} 
+            currentPage={currentPage} 
+            setCurrentPage={setCurrentPage} 
+            setMaxPageNumberLimit={setMaxPageNumberLimit}
+            setMinPageNumberLimit={setMinPageNumberLimit}
+            pageNumberLimit={pageNumberLimit}
+            minLimit={minPageNumberLimit}
+        />
         
         </>
     );
