@@ -50,7 +50,7 @@ const Pagination: React.FC<PaginationProps> = ({
     const pageNumbers = Array.from({ length: totalPages }, (_, index) => index + 1);
 
     return (
-        <div className="flex flex-wrap justify-center pt-8">
+        <div className="flex  flex-row flex-wrap justify-center p-5">
             <button className={`font-bold mr-2 rounded-lg bg-blue-500 p-3 text-white ${currentPage === 1 ? 'hidden': ''}`}
             onClick={() => handlePrevtBtn(setCurrentPage, currentPage, maxLimit, setMaxPageNumberLimit, setMinPageNumberLimit, pageNumberLimit, minLimit)}>
             <GrLinkPrevious/></button>
@@ -58,7 +58,7 @@ const Pagination: React.FC<PaginationProps> = ({
             {pageNumbers.map((number) => (
                 number < maxLimit + 1 && (
                     <button
-                        className={`font-extrabold mr-3 p-3 justify-center sm:mr- sm:mb-2 sm:p-3 border-black 
+                        className={`font-extrabold mr-1 p-2 justify-center sm:mr-3 sm:mb-2 sm:p-3 border-black 
                         rounded-full bg-slate-200 ${currentPage === number ? 'bg-slate-400' : 'font-semibold'}`}
                         key={number}
                         onClick={() => setCurrentPage(number)}
@@ -72,7 +72,7 @@ const Pagination: React.FC<PaginationProps> = ({
             ))}
             
             <button
-            className='font-bold mr-2 rounded-lg bg-blue-500 p-3 text-white' 
+            className=' flex-row font-bold mr-2 rounded-lg bg-blue-500 p-3 text-white' 
             onClick={() => handleNextBtn(setCurrentPage, currentPage, totalPages, maxLimit, setMaxPageNumberLimit, setMinPageNumberLimit, pageNumberLimit, minLimit)}>
             <GrLinkNext className="flex"/></button>
 

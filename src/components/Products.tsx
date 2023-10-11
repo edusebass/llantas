@@ -9,8 +9,8 @@ const Products: React.FC = () => {
     const [currentPage, setCurrentPage] = useState(1); 
     const itemsPerPage = 40;
 
-    const [pageNumberLimit] = useState(3);
-    const [maxPageNumberLimit, setMaxPageNumberLimit] = useState(3);
+    const [pageNumberLimit] = useState(5);
+    const [maxPageNumberLimit, setMaxPageNumberLimit] = useState(5);
     const [minPageNumberLimit, setMinPageNumberLimit] = useState(0);
 
     const llantasToDisplay = useLlantasStore((state) => state.llantasToDisplay);
@@ -54,9 +54,10 @@ const Products: React.FC = () => {
     
 
     return (
+        <>
         <section className="bg-gray-100 flex min-h-screen">
             <div
-                className="mx-auto w-full h-full flex flex-wrap max-w-7xl gap-6 pt-4 pb-12 px-4 md:px-0 items-center justify-center"
+                className="mx-auto w-full h-full flex flex-wrap max-w-7xl gap-6 pt-4 pb-5 px-4 md:px-0 items-center justify-center"
             >
                 { llantasToDisplay !== null ?
                     ( llantasToDisplay.length > 0 ?(
@@ -95,20 +96,21 @@ const Products: React.FC = () => {
                             Cargando...
                         </p>
                     )}
-                    <div><Pagination
-                    maxLimit={maxPageNumberLimit} 
-                    totalPages={Math.ceil(llantasToDisplay.length / itemsPerPage)} 
-                    currentPage={currentPage} 
-                    setCurrentPage={setCurrentPage} 
-                    setMaxPageNumberLimit={setMaxPageNumberLimit}
-                    setMinPageNumberLimit={setMinPageNumberLimit}
-                    pageNumberLimit={pageNumberLimit}
-                    minLimit={minPageNumberLimit}
-                    /></div>
+                   
             </div>
             
         </section>
-        
+        <Pagination
+            maxLimit={maxPageNumberLimit} 
+            totalPages={Math.ceil(llantasToDisplay.length / itemsPerPage)} 
+            currentPage={currentPage} 
+            setCurrentPage={setCurrentPage} 
+            setMaxPageNumberLimit={setMaxPageNumberLimit}
+            setMinPageNumberLimit={setMinPageNumberLimit}
+            pageNumberLimit={pageNumberLimit}
+            minLimit={minPageNumberLimit}
+        />
+        </>
     );
 };
 
