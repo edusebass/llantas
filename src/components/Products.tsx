@@ -55,6 +55,16 @@ const Products: React.FC = () => {
 
     return (
         <>
+        <Pagination
+            maxLimit={maxPageNumberLimit} 
+            totalPages={Math.ceil(llantasToDisplay.length / itemsPerPage)} 
+            currentPage={currentPage} 
+            setCurrentPage={setCurrentPage} 
+            setMaxPageNumberLimit={setMaxPageNumberLimit}
+            setMinPageNumberLimit={setMinPageNumberLimit}
+            pageNumberLimit={pageNumberLimit}
+            minLimit={minPageNumberLimit}
+        />
         <section className="bg-gray-100 flex min-h-screen">
             <div
                 className="mx-auto w-full h-full flex flex-wrap max-w-7xl gap-6 pt-4 pb-5 px-4 md:px-0 items-center justify-center"
@@ -100,16 +110,7 @@ const Products: React.FC = () => {
             </div>
             
         </section>
-        <Pagination
-            maxLimit={maxPageNumberLimit} 
-            totalPages={Math.ceil(llantasToDisplay.length / itemsPerPage)} 
-            currentPage={currentPage} 
-            setCurrentPage={setCurrentPage} 
-            setMaxPageNumberLimit={setMaxPageNumberLimit}
-            setMinPageNumberLimit={setMinPageNumberLimit}
-            pageNumberLimit={pageNumberLimit}
-            minLimit={minPageNumberLimit}
-        />
+        
         </>
     );
 };

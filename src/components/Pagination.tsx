@@ -50,7 +50,7 @@ const Pagination: React.FC<PaginationProps> = ({
     const pageNumbers = Array.from({ length: totalPages }, (_, index) => index + 1);
 
     return (
-        <div className="flex  flex-row flex-wrap justify-center p-5">
+        <div className="flex flex-row flex-wrap justify-center p-5">
             <button className={`font-bold mr-2 rounded-lg bg-blue-500 p-3 text-white ${currentPage === 1 ? 'hidden': ''}`}
             onClick={() => handlePrevtBtn(setCurrentPage, currentPage, maxLimit, setMaxPageNumberLimit, setMinPageNumberLimit, pageNumberLimit, minLimit)}>
             <GrLinkPrevious/></button>
