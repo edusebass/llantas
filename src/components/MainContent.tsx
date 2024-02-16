@@ -1,4 +1,13 @@
 const MainContent = () => {
+
+    const openWhatsAppChat = (messagePage: string) => {        
+        const phoneNumber = '+5930985661198'; // Reemplaza con tu número de teléfono
+        const message = messagePage
+
+        const whatsappLink = `https://wa.me/${phoneNumber}?text=Hola, estoy interasado en una llanta para un ${encodeURIComponent(message)}`;
+        window.open(whatsappLink, '_blank');
+    };
+
     return (
         <>
             <main className="my-8">
@@ -7,8 +16,8 @@ const MainContent = () => {
                         <div className="bg-gray-900 bg-opacity-50 flex items-center h-full">
                             <div className="px-10 max-w-xl">
                                 <h2 className="text-2xl text-white font-semibold">Auto</h2>
-                                <p className="mt-2 text-gray-400">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore facere provident molestias ipsam sint voluptatum pariatur.</p>
-                                <button className="flex items-center mt-4 px-3 py-2 bg-blue-600 text-white text-sm uppercase font-medium rounded hover:bg-blue-500 focus:outline-none focus:bg-blue-500">
+                                <p className="mt-2 text-white">Descubre la mejor selección de llantas para tu automóvil. </p>
+                                <button onClick={() => openWhatsAppChat("auto")} className="flex items-center mt-4 px-3 py-2 bg-blue-600 text-white text-sm uppercase font-medium rounded hover:bg-blue-500 focus:outline-none focus:bg-blue-500">
                                     <span>Cotiza tu medida</span>
                                     <svg className="h-5 w-5 mx-2" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor"><path d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
                                 </button>
@@ -20,8 +29,8 @@ const MainContent = () => {
                             <div className="bg-gray-900 bg-opacity-50 flex items-center h-full">
                                 <div className="px-10 max-w-xl">
                                     <h2 className="text-2xl text-white font-semibold">Suv</h2>
-                                    <p className="mt-2 text-gray-400">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore facere provident molestias ipsam sint voluptatum pariatur.</p>
-                                    <button className="flex items-center mt-4 text-white text-sm uppercase font-medium rounded hover:underline focus:outline-none">
+                                    <p className="mt-2 text-white">Descubre la mejor selección de llantas para tu SUV </p>
+                                    <button onClick={() => openWhatsAppChat("auto SUV")} className="flex items-center mt-4 px-3 py-2 bg-blue-600 text-white text-sm uppercase font-medium rounded hover:underline focus:outline-none">
                                         <span>Cotiza tu medida</span>
                                         <svg className="h-5 w-5 mx-2" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor"><path d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
                                     </button>
@@ -32,8 +41,8 @@ const MainContent = () => {
                             <div className="bg-gray-900 bg-opacity-50 flex items-center h-full">
                                 <div className="px-10 max-w-xl">
                                     <h2 className="text-2xl text-white font-semibold">Camion</h2>
-                                    <p className="mt-2 text-gray-400">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore facere provident molestias ipsam sint voluptatum pariatur.</p>
-                                    <button className="flex items-center mt-4 text-white text-sm uppercase font-medium rounded hover:underline focus:outline-none">
+                                    <p className="mt-2 text-white">Descubre la mejor selección de llantas para tu Camion </p>
+                                    <button onClick={() => openWhatsAppChat("CAMION")} className="flex items-center mt-4 px-3 py-2 bg-blue-600 text-white text-sm uppercase font-medium rounded hover:underline focus:outline-none">
                                         <span>Cotiza tu medida</span>
                                         <svg className="h-5 w-5 mx-2" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor"><path d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
                                     </button>
@@ -41,7 +50,7 @@ const MainContent = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="mt-16">
+                    {/* <div className="mt-16">
                         <h3 className="text-gray-600 text-2xl font-medium">Fashions</h3>
                         <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-6">
                             <div className="w-full max-w-sm mx-auto rounded-md shadow-md overflow-hidden">
@@ -138,7 +147,7 @@ const MainContent = () => {
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
             </main>
         </>
