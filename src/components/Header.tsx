@@ -1,4 +1,17 @@
+import { useLocation, useNavigate } from "react-router-dom";
+
 const Header = () => {
+    const navigate = useNavigate();
+    const location = useLocation();
+
+    const goToPage = (page: string) => {
+        //Se valida que la ruta la que quiero ir es diferente a la de origen, sino no tiene sentido navegar ni reiniciar el state de items
+        if (location.pathname !== page) {
+        navigate(page);
+        
+        }
+    };
+
     return (
         <>
             <header>
@@ -31,10 +44,10 @@ const Header = () => {
                     </div>
                     <nav  className="sm:flex sm:justify-center sm:items-center mt-4">
                         <div className="flex flex-col sm:flex-row">
-                            <a className="mt-3 text-gray-600 hover:underline sm:mx-3 sm:mt-0" href="#">Home</a>
+                            <a onClick={() => goToPage("/")} className="mt-3 text-gray-600 hover:underline sm:mx-3 sm:mt-0" href="#">Home</a>
                             {/* <a className="mt-3 text-gray-600 hover:underline sm:mx-3 sm:mt-0" href="#">Shop</a> */}
-                            <a className="mt-3 text-gray-600 hover:underline sm:mx-3 sm:mt-0" href="#">LLantas Stock</a>
-                            <a className="mt-3 text-gray-600 hover:underline sm:mx-3 sm:mt-0" href="#">Contact</a>
+                            <a onClick={() => goToPage("/stock")} className="mt-3 text-gray-600 hover:underline sm:mx-3 sm:mt-0" href="#">LLantas Stock</a>
+                            <a onClick={() => goToPage("/contact") } className="mt-3 text-gray-600 hover:underline sm:mx-3 sm:mt-0" href="#">Contact</a>
                             {/* <a className="mt-3 text-gray-600 hover:underline sm:mx-3 sm:mt-0" href="#">About</a> */}
                         </div>
                     </nav>
