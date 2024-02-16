@@ -1,14 +1,28 @@
-import Main from "./pages/Main"
+// App.tsx
+import React from 'react';
+import { BrowserRouter as Router, Route,Routes } from 'react-router-dom';
+import Inicio from './pages/Inicio';
+import Layout from './Layout';
+import Stock from './pages/Stock';
 
-
-
-function App() {
-
+const App: React.FC = () => {
   return (
-    <body>
-        <Main/>
-    </body>
-  )
-}
+    <Router>
+        <Routes>
+        <Route
+          path="/*"
+          element={
+            <Layout>
+              <Routes>
+                <Route path="/" element={<Inicio />} />
+                <Route path="stock" element={<Stock />} />
+              </Routes>
+            </Layout>
+          }
+        />
+        </Routes>
+      </Router>
+  );
+};
 
-export default App
+export default App;

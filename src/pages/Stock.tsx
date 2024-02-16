@@ -4,15 +4,14 @@ import Products from "../components/Products";
 
 
 
-function App() {
+function Stock() {
 
   return (
     <body>
-      <Navbar />
       <Buscador />
       <Products/>
     </body>
   )
 }
 
-export default App
+export default Stock
