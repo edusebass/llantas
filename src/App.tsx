@@ -1,15 +1,12 @@
-import NavBar from "./components/Navbar";
-import Products from "./components/Products";
-import Buscador from "./components/Buscador";
+import Main from "./pages/Main"
+
 
 
 function App() {
 
   return (
     <body>
-      <NavBar />
-      <Buscador />
-      <Products/>
+        <Main/>
     </body>
   )
 }
