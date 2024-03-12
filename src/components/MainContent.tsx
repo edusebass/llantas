@@ -37,7 +37,7 @@ const MainContent = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="w-full h-64 mt-8 md:mx-4 rounded-md overflow-hidden bg-cover bg-center md:mt-0 md:w-1/2"  style={{ backgroundImage: 'url(https://media.chevroletarabia.com/dld/content/Pages/news/co/es/2011/Aug/0810_camiones/_jcr_content/rightpar/sectioncontainer_1/par/download/file.res/Chevrolet%20SERIE%20F%20FONDO.jpg)' }} >
+                        <div className="w-full h-64 mt-8 md:mx-4 rounded-md overflow-hidden bg-cover bg-center md:mt-0 md:w-1/2"  style={{ backgroundImage: 'url(https://www.interperu.pe/blog/wp-content/uploads/2019/06/international-camiones-primer-segundo-mantenimiento-camion.jpg)' }} >
                             <div className="bg-gray-900 bg-opacity-50 flex items-center h-full">
                                 <div className="px-10 max-w-xl">
                                     <h2 className="text-2xl text-white font-semibold">Camion</h2>

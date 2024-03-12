@@ -12,6 +12,14 @@ const Header = () => {
         }
     };
 
+    const phoneNumber = "+5930985661198";
+    const message = "Your message goes here"; // Replace this with your actual message
+    const whatsappLink = `https://wa.me/${phoneNumber}?text=Hola, estoy interesado en una llanta para un ${encodeURIComponent(message)}`;
+
+    const openWhatsappLink = () => {
+    window.open(whatsappLink, '_blank');
+    };
+
     return (
         <>
             <header>
@@ -46,8 +54,8 @@ const Header = () => {
                         <div className="flex flex-col sm:flex-row">
                             <a onClick={() => goToPage("/")} className="mt-3 text-gray-600 hover:underline sm:mx-3 sm:mt-0" href="#">Home</a>
                             {/* <a className="mt-3 text-gray-600 hover:underline sm:mx-3 sm:mt-0" href="#">Shop</a> */}
-                            <a onClick={() => goToPage("/stock")} className="mt-3 text-gray-600 hover:underline sm:mx-3 sm:mt-0" href="#">LLantas Stock</a>
-                            <a onClick={() => goToPage("/contact") } className="mt-3 text-gray-600 hover:underline sm:mx-3 sm:mt-0" href="#">Contact</a>
+                            {/* <a onClick={() => goToPage("/stock")} className="mt-3 text-gray-600 hover:underline sm:mx-3 sm:mt-0" href="#">LLantas Stock</a> */}
+                            <a onClick={openWhatsappLink } className="mt-3 text-gray-600 hover:underline sm:mx-3 sm:mt-0" href="#">Contact</a>
                             {/* <a className="mt-3 text-gray-600 hover:underline sm:mx-3 sm:mt-0" href="#">About</a> */}
                         </div>
                     </nav>
