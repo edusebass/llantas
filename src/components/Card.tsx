@@ -2,7 +2,7 @@ function Card({
     ancho,
     altura,
     rin,
-    marcaimg,
+    // marcaimg,
     precio,
     foto,
     labrado,
@@ -27,9 +27,9 @@ function Card({
                     <h2 className="text-slate-700 font-bold text-xl text-center">
                         {`${ancho ?? ''}/${altura ?? ''}R${rin ?? ''} ${labrado} ${marca ?? ""}`}
                     </h2>
-                    <img src={marcaimg} alt="logo marca"
+                    {/* <img src={marcaimg} alt="logo marca"
                         className="h-8 object-cover object-center w-auto"
-                    />
+                    /> */}
                     <div className="flex items-center justify-between w-full xl:w-5/6">
                         <p className="text-lg font-bold text-blue-500">
                             {`$${precio.toFixed(2)}`}
