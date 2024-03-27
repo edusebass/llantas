@@ -2,9 +2,9 @@ interface Llanta {
     ancho: number;
     altura: number;
     rin: number;
-    marcaimg: string;
+    marcaimg?: string;
     precio: number;
-    foto: string;
+    foto?: string;
     labrado: string;
     marca: string;
 }
