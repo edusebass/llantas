@@ -10,7 +10,8 @@ interface Producto {
     ancho: number;
     rin: number;
     costo: number;
-    linkimg: string
+    linkimg: string;
+    pvp: number
 }
 
 export default function StockActual() {
@@ -56,7 +57,7 @@ export default function StockActual() {
                 altura={producto.alto}
                 ancho={producto.ancho}
                 rin={producto.rin}
-                precio={producto.costo + 12}
+                precio={producto?.pvp}
                 marca={producto.marca}
                 labrado={producto.labrado}
                 foto={producto?.linkimg}
