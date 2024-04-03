@@ -32,7 +32,7 @@ function Card({
                     /> */}
                     <div className="flex items-center justify-between w-full xl:w-5/6">
                         <p className="text-lg font-bold text-blue-500">
-                            {`$${precio.toFixed(2)}`}
+                            {`$${precio?.toFixed(2)}`}
                         </p>
 
                         <div
