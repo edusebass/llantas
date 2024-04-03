@@ -1,4 +1,14 @@
+import { IoMdCall } from "react-icons/io";
+import { MdEmail } from "react-icons/md";
+
 const Footer = () => {
+    const phoneNumber = "+5930985661198";
+    const message = "Your message goes here"; // Replace this with your actual message
+    const whatsappLink = `https://wa.me/${phoneNumber}?text=Hola, estoy interesado en una llanta para un ${encodeURIComponent(message)}`;
+
+    const openWhatsappLink = () => {
+    window.open(whatsappLink, '_blank');
+    };
     return (
         <>
             <footer className="bg-gray-200">
@@ -9,8 +19,14 @@ const Footer = () => {
                         <p className="text-amber-900 text-xl font-bold">Ofrecemos calidad y servicios</p>
                     </div>
                     <div>
-                        <p>0985661198</p>
-                        <p>acinomroma@hotmail.com</p>
+                        <div className="flex items-center gap-1 hover:cursor-pointer hover:text-zinc-700">
+                            <IoMdCall />
+                            <p>0985661198</p>
+                        </div>
+                        <div className="flex items-center gap-1 hover:cursor-pointer hover:text-zinc-700" onClick={openWhatsappLink}>
+                                <MdEmail />
+                                <p>acinomroma@hotmail.com</p>
+                        </div>
                     </div>
                 </div>
                 <div className="container mx-auto px-6 py-3 flex justify-between items-center">
