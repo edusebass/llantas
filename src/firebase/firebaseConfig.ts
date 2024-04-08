@@ -8,4 +8,4 @@
 //     measurementId: import.meta.env.REACT_APP_measurementId
 // };
 
-// // export default firebaseConfig;
+// export default firebaseConfig;
