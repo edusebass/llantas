@@ -1,5 +1,5 @@
 import Buscador from "../components/Buscador";
-import Products from "../components/Products";
+// import Products from "../components/Products";
 
 
 
@@ -8,7 +8,7 @@ function Stock() {
   return (
     <body>
       <Buscador />
-      <Products/>
+      {/* <Products/> */}
     </body>
   )
 }

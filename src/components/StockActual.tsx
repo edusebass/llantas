@@ -45,7 +45,10 @@ export default function StockActual() {
 
     return (  
         <>
-        <section className="bg-gray-100 flex min-h-screen">
+        <section className="bg-gray-100 flex min-h-screen flex-col">
+            <div className="flex items-center justify-center ">
+                <p className="font-bungee w-auto text-4xl my-5" >PROMOCIONES DE ESTE MES</p> 
+            </div>
             <div
                 className="mx-auto w-full h-full flex flex-wrap max-w-7xl gap-6 pt-4 pb-5 px-4 md:px-0 items-center justify-center"
             >

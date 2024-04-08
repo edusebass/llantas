@@ -25,7 +25,10 @@ function Card({
                 </div>
                 <div className="flex flex-col items-center justify-center gap-4">
                     <h2 className="text-slate-700 font-bold text-xl text-center">
-                        {`${ancho ?? ''}/${altura ?? ''}R${rin ?? ''} ${labrado} ${marca ?? ""}`}
+                        {`${ancho ?? ''}/${altura ?? ''}R${rin ?? ''} ${labrado} `}
+                    </h2>
+                    <h2 className="text-red-600 font-bold text-base text-center">
+                        {` ${marca ?? ""}`}
                     </h2>
                     {/* <img src={marcaimg} alt="logo marca"
                         className="h-8 object-cover object-center w-auto"
