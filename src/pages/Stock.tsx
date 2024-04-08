@@ -1,16 +1,16 @@
-import Buscador from "../components/Buscador";
-import Products from "../components/Products";
+// import Buscador from "../components/Buscador";
+// import Products from "../components/Products";
 
 
 
-function Stock() {
+// function Stock() {
 
-  return (
-    <body>
-      <Buscador />
-      <Products/>
-    </body>
-  )
-}
+//   return (
+//     <body>
+//       <Buscador />
+//       <Products/>
+//     </body>
+//   )
+// }
 
-export default Stock
+// export default Stock

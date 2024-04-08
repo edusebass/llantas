@@ -3,7 +3,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route,Routes } from 'react-router-dom';
 import Inicio from './pages/Inicio';
 import Layout from './Layout';
-import Stock from './pages/Stock';
+// import Stock from './pages/Stock';
 
 const App: React.FC = () => {
   return (
@@ -15,7 +15,7 @@ const App: React.FC = () => {
             <Layout>
               <Routes>
                 <Route path="/" element={<Inicio />} />
-                <Route path="stock" element={<Stock />} />
+                {/* <Route path="stock" element={<Stock />} /> */}
               </Routes>
             </Layout>
           }
