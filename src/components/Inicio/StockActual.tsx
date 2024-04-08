@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Card from "./Card";
+import Card from "../Card";
 
 interface Producto {
     _id: string;
@@ -46,7 +46,7 @@ export default function StockActual() {
     return (  
         <>
         <section className="bg-gray-100 flex min-h-screen flex-col">
-            <div className="flex items-center justify-center ">
+            <div className="flex items-center justify-center ml-4 lg:ml-0 ">
                 <p className="font-bungee w-auto text-4xl my-5" >PROMOCIONES DE ESTE MES</p> 
             </div>
             <div

@@ -1,6 +1,6 @@
 import { FloatButton } from "antd"
-import MainContent from "../components/MainContent"
-import StockActual from "../components/StockActual"
+import MainContent from "../components/Inicio/MainContent"
+import StockActual from "../components/Inicio/StockActual"
 import { FaWhatsapp } from "react-icons/fa";
 
 const Inicio = () => {
@@ -16,7 +16,6 @@ const Inicio = () => {
             <div className="bg-white">
                 <MainContent/>
                 <StockActual />
-                
                 <FloatButton
                     shape="circle"
                     style={{color: "green"}}
