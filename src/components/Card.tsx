@@ -24,19 +24,29 @@ function Card({
                     />
                 </div>
                 <div className="flex flex-col items-center justify-center gap-4">
-                    <h2 className="text-slate-700 font-bold text-xl text-center">
-                        {`${ancho ?? ''}/${altura ?? ''}R${rin ?? ''} ${labrado} `}
-                    </h2>
-                    <h2 className="text-red-600 font-bold text-base text-center">
+                    <div >
+                        <h2 className="text-slate-700 font-bold text-xl text-center">
+                            {`${ancho ?? ''}/${altura ?? ''}R${rin ?? ''}  `}
+                        </h2>
+                        <h2 className="text-cyan-950 font-semibold text-base font-mono text-center">
+                            {`${labrado} `}
+                        </h2>
+                    </div>
+                    <h2 className="text-orange-500 font-bold text-base text-center">
                         {` ${marca ?? ""}`}
                     </h2>
                     {/* <img src={marcaimg} alt="logo marca"
                         className="h-8 object-cover object-center w-auto"
                     /> */}
                     <div className="flex items-center justify-between w-full xl:w-5/6">
-                        <p className="text-lg font-bold text-blue-500">
-                            {`$${precio?.toFixed(2)}`}
-                        </p>
+                        <div>
+                            <p className="text-xs font-bold text-red-500 line-through">
+                                {`$${(precio + 12.99)}` }
+                            </p>
+                            <p className="text-lg font-bold text-blue-500">
+                                {`$${precio?.toFixed(2)}` }
+                            </p>
+                        </div>
 
                         <div
                             className="flex items-center justify-between gap-2 rounded-lg bg-blue-500 px-4 py-1.5 text-white duration-100 hover:bg-blue-600"
