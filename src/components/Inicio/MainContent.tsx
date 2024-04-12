@@ -53,7 +53,7 @@ const MainContent = () => {
                             </div>
                         </div>
 
-                        <div className="w-full h-64 md:mx-4 rounded-md overflow-hidden bg-cover bg-center md:w-1/2" style={{ backgroundImage: 'url(https://cdn.autobild.es/sites/navi.axelspringer.es/public/media/image/2022/03/fiat-ulysse-2635503.jpg?tf=3840x)' }}>
+                        <div className="w-full h-64 mt-8 md:mx-4 rounded-md overflow-hidden bg-cover bg-center md:mt-0 md:w-1/2" style={{ backgroundImage: 'url(https://cdn.autobild.es/sites/navi.axelspringer.es/public/media/image/2022/03/fiat-ulysse-2635503.jpg?tf=3840x)' }}>
                             <div className="bg-gray-900 bg-opacity-50 flex items-center h-full">
                                 <div className="px-10 max-w-xl">
                                     <h2 className="text-2xl text-white font-semibold">Furgoneta</h2>
